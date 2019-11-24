@@ -25,6 +25,10 @@ export default {
       type: Number,
       default: 3,
     },
+    rtl: {
+      type: Boolean,
+      default: false,
+    },
     margin: {
       type: Number,
       default: 0,
@@ -232,6 +236,7 @@ export default {
   mounted: function() {
     const owl = $('#' + this.elementHandle).owlCarousel({
       items: this.items,
+      rtl: this.rtl,
       margin: this.margin,
       loop: this.loop,
       center: this.center,
